@@ -4,7 +4,7 @@ prev_date = datetime.now()  # переменная для предыдущей �
 c = 0  # счетчик кол-ва NOK
 result = {}  # переменная для сохранения результата
 
-with open(r"C:\Users\artem\Desktop\events.log") as file:
+with open("events.log") as file:
     for line in file:
         if not line.isspace() and line.split()[-1] == 'NOK':  # обрабатываем строку только если она не пустая и содержит 'NOK' в конце
             date_str = ' '.join(line.split()[0:2])  # парсим дату из строки
